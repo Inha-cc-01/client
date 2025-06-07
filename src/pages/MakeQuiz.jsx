@@ -147,6 +147,8 @@ const MakeQuiz = () => {
         quizCount: questionCount,
         quizType: "MULTIPLE",
         difficultyType: quizLevel,
+        pageSelected: false,
+        selectedPages: [1],
       });
       const result = response.data;
       console.log("생성된 문제 데이터:", result);
