@@ -1,7 +1,7 @@
 .help-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
+  margin-top: 100px;
 }
 
 .help-header {
@@ -32,11 +32,9 @@
 }
 
 .help-title {
-  color: white;
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .help-content {
@@ -44,7 +42,7 @@
   margin: 0 auto;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
   overflow: hidden;
 }
 
@@ -233,32 +231,32 @@
   .help-container {
     padding: 15px;
   }
-  
+
   .help-title {
     font-size: 2rem;
   }
-  
+
   .help-content {
     border-radius: 15px;
   }
-  
+
   .help-section {
     padding: 30px 25px 20px 25px;
   }
-  
+
   .help-section h2 {
     font-size: 1.5rem;
   }
-  
+
   .tips-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .tip-card,
   .step-card {
     padding: 20px;
   }
-  
+
   .back-button {
     padding: 8px 16px;
     font-size: 14px;
@@ -271,17 +269,17 @@
     align-items: flex-start;
     gap: 15px;
   }
-  
+
   .help-title {
     font-size: 1.8rem;
   }
-  
+
   .help-section {
     padding: 25px 20px 15px 20px;
   }
-  
+
   .step-card,
   .tip-card {
     padding: 18px;
   }
-} 
+}

@@ -1,13 +1,14 @@
 // src/pages/MakeQuiz.jsx
 import axiosInstance from "#shared/api";
 import CustomToast from "#shared/toast";
-import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import { trackMakeQuizEvents } from "../utils/analytics";
+import Help from "./Help";
 import "./MakeQuiz.css";
 
 const levelDescriptions = {
@@ -389,8 +390,8 @@ const MakeQuiz = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       />
 
-      <main className="main">
-        <section
+      <div className="main">
+        <div
           className={`upload-section ${isDragging ? "dragging" : ""}`}
           onDragOver={handleDragOver}
           onDragEnter={handleDragEnter}
@@ -436,7 +437,7 @@ const MakeQuiz = () => {
             🚨파일은 상업적 목적, AI 학습 목적으로 사용되지 않습니다.<br></br>{" "}
             24시간 후 자동 삭제되며 별도로 저장, 공유되지 않습니다.
           </p>
-        </section>
+        </div>
         {/* Options Panel */}
         {uploadedUrl && !problemSetId && (
           <section className="options-panel">
@@ -588,7 +589,7 @@ const MakeQuiz = () => {
         )}
         {/* ① 문서 미리보기 */}
         {uploadedUrl && (
-          <section className="document-preview">
+          <div className="document-preview">
             <h2>문서 미리보기</h2>
             <div className="preview-content">
               {isProcessing ? (
@@ -629,7 +630,7 @@ const MakeQuiz = () => {
                 </div>
               )}
             </div>
-          </section>
+          </div>
         )}
 
         {uploadedUrl && !problemSetId && (
@@ -649,7 +650,8 @@ const MakeQuiz = () => {
             </button>
           </div>
         )}
-      </main>
+      </div>
+      <Help />
       {/* Footer */}
       <footer className="footer">
         © 2025 Q-Asker. All rights reserved. 문의 및 피드백 : inhapj01@gmail.com
